@@ -26,32 +26,57 @@ var AnimationLayer = cc.Layer.extend({
         this.addChild(background, -2);
 
         //下面草的背景
-        var grassLower = new cc.Sprite(resource.grass_lower);
-        grassLower.setAnchorPoint(cc.p(0.5, 1));
-        grassLower.setPosition(winSize.width/2, winSize.height/2);
-        this.addChild(grassLower, 1)
+        var grassLower1 = new cc.Sprite(resource.grass_lower);
+        grassLower1.setAnchorPoint(cc.p(0.5, 1));
+        grassLower1.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassLower1, 1)
 
         //上面草的背景
-        var grassUpper = new cc.Sprite(resource.grass_upper);
-        grassUpper.setAnchorPoint(cc.p(0.5, 0));
-        grassUpper.setPosition(winSize.width/2, winSize.height/2);
-        this.addChild(grassUpper, -1);
+        var grassUpper1 = new cc.Sprite(resource.grass_upper);
+        grassUpper1.setAnchorPoint(cc.p(0.5, 0));
+        grassUpper1.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassUpper1, -1);
+
+        //下面草的背景
+        var grassLower2 = new cc.Sprite(resource.grass_lower);
+        grassLower2.setAnchorPoint(cc.p(0.5, 1));
+        grassLower2.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassLower2, 1)
+
+        //上面草的背景
+        var grassUpper2 = new cc.Sprite(resource.grass_upper);
+        grassUpper2.setAnchorPoint(cc.p(0.5, 0));
+        grassUpper2.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassUpper2, -1);
+
+
+        //下面草的背景
+        var grassLower3 = new cc.Sprite(resource.grass_lower);
+        grassLower3.setAnchorPoint(cc.p(0.5, 1));
+        grassLower3.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassLower3, 1)
+
+        //上面草的背景
+        var grassUpper3 = new cc.Sprite(resource.grass_upper);
+        grassUpper3.setAnchorPoint(cc.p(0.5, 0));
+        grassUpper3.setPosition(winSize.width/2, winSize.height/2);
+        this.addChild(grassUpper3, -1);
 
         //老鼠
         var mouse1 = new cc.Sprite(resource.mole_1);
-        mouse1.attr({x : 200, y: 300});
+        mouse1.attr({x : 170, y: 200});
         mouse1.setTag(0);
         self.mouseList.push(mouse1);
         this.addChild(mouse1, 0);
 
         var mouse2 = new cc.Sprite(resource.mole_1);
-        mouse2.attr({x : 515, y: 300});
+        mouse2.attr({x : 485, y: 200});
         mouse2.setTag(0);
         self.mouseList.push(mouse2);
         this.addChild(mouse2, 0);
 
         var mouse3 = new cc.Sprite(resource.mole_1);
-        mouse3.attr({x : 815, y: 300});
+        mouse3.attr({x : 785, y: 200});
         mouse3.setTag(0);
         self.mouseList.push(mouse3);
         this.addChild(mouse3, 0);
@@ -95,7 +120,7 @@ var AnimationLayer = cc.Layer.extend({
      */
     popMouse : function (mouse) {
         var self = this;
-        var moveUp = cc.MoveBy.create(1, cc.p(0, mouse.getContentSize().height - 60));
+        var moveUp = cc.MoveBy.create(1, cc.p(0, mouse.getContentSize().height - 120));
         var easeMoveUp = cc.EaseInOut.create(moveUp, 3);
         var easeMoveDown = easeMoveUp.reverse();
         var laugh = self.createAnimation('mole_laugh', [1,2,3]);
