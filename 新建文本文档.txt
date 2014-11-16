@@ -1,0 +1,5 @@
+http://cn.cocos2d-x.org/
+
+http://cn.cocos2d-x.org/tutorial/lists?id=84
+
+http://www.jikexueyuan.com/course/cocos2d-x/

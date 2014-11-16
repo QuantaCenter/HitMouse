@@ -4,8 +4,8 @@
 
 var resource = {
     bg_dirt : 'img/background/bg_dirt.png',
-    grass_lower : 'img/foreground/grass_lower.png',
-    grass_upper : 'img/foreground/grass_upper.png',
+    lower : 'img/foreground/lower.png',
+    upper : 'img/foreground/upper.png',
     mole_1 : 'img/sprites/mole_1.png',
     mole_laugh1 : 'img/sprites/mole_laugh1.png',
     mole_laugh2 : 'img/sprites/mole_laugh2.png',
@@ -18,8 +18,8 @@ var resource = {
 
 var g_resources = [
     resource.bg_dirt,
-    resource.grass_lower,
-    resource.grass_upper,
+    resource.lower,
+    resource.upper,
     resource.mole_1,
     resource.mole_laugh1,
     resource.mole_laugh2,

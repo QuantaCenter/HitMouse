@@ -26,56 +26,59 @@ var AnimationLayer = cc.Layer.extend({
         this.addChild(background, -2);
 
         //下面草的背景
-        var grassLower1 = new cc.Sprite(resource.grass_lower);
-        grassLower1.setAnchorPoint(cc.p(0.5, 1));
-        grassLower1.setPosition(winSize.width/2, winSize.height/2);
-        this.addChild(grassLower1, 1)
+        var grassLower1 = new cc.Sprite(resource.lower);
+        grassLower1.setAnchorPoint(cc.p(0, 0));
+        grassLower1.setPosition(0, 0);
+        this.addChild(grassLower1, 1);
 
         //上面草的背景
-        var grassUpper1 = new cc.Sprite(resource.grass_upper);
-        grassUpper1.setAnchorPoint(cc.p(0.5, 0));
-        grassUpper1.setPosition(winSize.width/2, winSize.height/2);
+        var grassUpper1 = new cc.Sprite(resource.upper);
+        grassUpper1.setAnchorPoint(cc.p(0, 0));
+        grassUpper1.setPosition(0, 74);
         this.addChild(grassUpper1, -1);
 
         //下面草的背景
-        var grassLower2 = new cc.Sprite(resource.grass_lower);
-        grassLower2.setAnchorPoint(cc.p(0.5, 1));
-        grassLower2.setPosition(winSize.width/2, winSize.height/2);
+        var grassLower2 = new cc.Sprite(resource.lower);
+        grassLower2.setAnchorPoint(cc.p(0, 0));
+        grassLower2.setPosition(0, 160);
         this.addChild(grassLower2, 1)
 
         //上面草的背景
-        var grassUpper2 = new cc.Sprite(resource.grass_upper);
-        grassUpper2.setAnchorPoint(cc.p(0.5, 0));
-        grassUpper2.setPosition(winSize.width/2, winSize.height/2);
+        var grassUpper2 = new cc.Sprite(resource.upper);
+        grassUpper2.setAnchorPoint(cc.p(0, 0));
+        grassUpper2.setPosition(0, 234);
         this.addChild(grassUpper2, -1);
 
 
         //下面草的背景
-        var grassLower3 = new cc.Sprite(resource.grass_lower);
-        grassLower3.setAnchorPoint(cc.p(0.5, 1));
-        grassLower3.setPosition(winSize.width/2, winSize.height/2);
+        var grassLower3 = new cc.Sprite(resource.lower);
+        grassLower3.setAnchorPoint(cc.p(0, 0));
+        grassLower3.setPosition(0, 320);
         this.addChild(grassLower3, 1)
 
         //上面草的背景
-        var grassUpper3 = new cc.Sprite(resource.grass_upper);
-        grassUpper3.setAnchorPoint(cc.p(0.5, 0));
-        grassUpper3.setPosition(winSize.width/2, winSize.height/2);
+        var grassUpper3 = new cc.Sprite(resource.upper);
+        grassUpper3.setAnchorPoint(cc.p(0, 0));
+        grassUpper3.setPosition(0,394);
         this.addChild(grassUpper3, -1);
 
         //老鼠
         var mouse1 = new cc.Sprite(resource.mole_1);
+        mouse1.setScale(0.5);
         mouse1.attr({x : 170, y: 200});
         mouse1.setTag(0);
         self.mouseList.push(mouse1);
         this.addChild(mouse1, 0);
 
         var mouse2 = new cc.Sprite(resource.mole_1);
+        mouse2.setScale(0.5);
         mouse2.attr({x : 485, y: 200});
         mouse2.setTag(0);
         self.mouseList.push(mouse2);
         this.addChild(mouse2, 0);
 
         var mouse3 = new cc.Sprite(resource.mole_1);
+        mouse3.setScale(0.5);
         mouse3.attr({x : 785, y: 200});
         mouse3.setTag(0);
         self.mouseList.push(mouse3);
@@ -83,7 +86,7 @@ var AnimationLayer = cc.Layer.extend({
 
 
         this.schedule(function () {
-            self.tryPopMouse();
+            //self.tryPopMouse();
         }, 4);
 
 
